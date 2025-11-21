@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation template for EventBridge RuleCrawlerCompleteRule
+Resources:
+  Rule0f7f8031:
+    Type: AWS::Events::Rule
+    Properties:
+      Name: CrawlerCompleteRule
+      EventPattern: '{"source":["aws.glue"],"detail-type":["Glue Job State Change"]}'
+      State: ENABLED
+      Description: ''
+      EventBusName: default
+      Targets:
+        - Id: Id1c22cad6-a27b-463a-a83e-859c569f64e9
+          Arn:
+            Fn::Sub: >-
+              arn:${AWS::Partition}:lambda:${AWS::Region}:${AWS::AccountId}:function:ETLJobLambda
+          RoleArn:
+            Fn::Sub: >-
+              arn:${AWS::Partition}:iam::${AWS::AccountId}:role/GlueLambdaExecutionRole
+Parameters: {}
