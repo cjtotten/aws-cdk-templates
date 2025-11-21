@@ -1,0 +1,703 @@
+---
+Metadata:
+  AWSToolsMetrics:
+    IaC_Generator: "arn:aws:cloudformation:us-east-2:476642081501:generatedTemplate/3f641324-755a-4fb8-b8d9-111086d9918e"
+Parameters:
+  LambdaFunctionGlueTriggerLambdaCodeImageUrinDdKj:
+    NoEcho: "true"
+    Type: "String"
+    Description: "URI of a [container image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)\
+      \ in the Amazon ECR registry."
+  LambdaFunctionETLJobLambdaCodeImageUriJxmsO:
+    NoEcho: "true"
+    Type: "String"
+    Description: "URI of a [container image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)\
+      \ in the Amazon ECR registry."
+  LambdaFunctionETLJobLambdaCodeS3ObjectVersionR0mgK:
+    NoEcho: "true"
+    Type: "String"
+    Description: "For versioned objects, the version of the deployment package object\
+      \ to use."
+  LambdaFunctionETLJobLambdaCodeS3Key33m8O:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Amazon S3 key of the deployment package."
+  LambdaFunctionS3DataReaderCodeS3BucketGUBeZ:
+    NoEcho: "true"
+    Type: "String"
+    Description: "An Amazon S3 bucket in the same AWS-Region as your function. The\
+      \ bucket can be in a different AWS-account."
+  LambdaFunctionGlueTriggerLambdaCodeS3ObjectVersionREYPp:
+    NoEcho: "true"
+    Type: "String"
+    Description: "For versioned objects, the version of the deployment package object\
+      \ to use."
+  LambdaFunctionS3DataReaderCodeZipFilecEDjO:
+    NoEcho: "true"
+    Type: "String"
+    Description: "(Node.js and Python) The source code of your Lambda function. If\
+      \ you include your function source inline with this parameter, CFN places it\
+      \ in a file named ``index`` and zips it to create a [deployment package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html).\
+      \ This zip file cannot exceed 4MB. For the ``Handler`` property, the first part\
+      \ of the handler identifier must be ``index``. For example, ``index.handler``.\n\
+      \  When you specify source code inline for a Node.js function, the ``index``\
+      \ file that CFN creates uses the extension ``.js``. This means that LAM treats\
+      \ the file as a CommonJS module. ES modules aren't supported for inline functions.\n\
+      \   For JSON, you must escape quotes and special characters such as newline\
+      \ (``\\n``) with a backslash.\n If you specify a function that interacts with\
+      \ an AWS CloudFormation custom resource, you don't have to write your own functions\
+      \ to send responses to the custom resource that invoked the function. AWS CloudFormation\
+      \ provides a response module ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))\
+      \ that simplifies sending responses. See [Using Lambda with CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html)\
+      \ for details."
+  LambdaFunctionS3DataReaderCodeS3KeyIhO1D:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Amazon S3 key of the deployment package."
+  LambdaFunctionGlueTriggerLambdaCodeS3BucketqAjZk:
+    NoEcho: "true"
+    Type: "String"
+    Description: "An Amazon S3 bucket in the same AWS-Region as your function. The\
+      \ bucket can be in a different AWS-account."
+  LambdaFunctionGlueTriggerLambdaCodeZipFiledwyc1:
+    NoEcho: "true"
+    Type: "String"
+    Description: "(Node.js and Python) The source code of your Lambda function. If\
+      \ you include your function source inline with this parameter, CFN places it\
+      \ in a file named ``index`` and zips it to create a [deployment package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html).\
+      \ This zip file cannot exceed 4MB. For the ``Handler`` property, the first part\
+      \ of the handler identifier must be ``index``. For example, ``index.handler``.\n\
+      \  When you specify source code inline for a Node.js function, the ``index``\
+      \ file that CFN creates uses the extension ``.js``. This means that LAM treats\
+      \ the file as a CommonJS module. ES modules aren't supported for inline functions.\n\
+      \   For JSON, you must escape quotes and special characters such as newline\
+      \ (``\\n``) with a backslash.\n If you specify a function that interacts with\
+      \ an AWS CloudFormation custom resource, you don't have to write your own functions\
+      \ to send responses to the custom resource that invoked the function. AWS CloudFormation\
+      \ provides a response module ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))\
+      \ that simplifies sending responses. See [Using Lambda with CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html)\
+      \ for details."
+  LambdaFunctionETLJobLambdaCodeSourceKMSKeyArnGUqy6:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ARN of the KMSlong (KMS) customer managed key that's used to\
+      \ encrypt your function's .zip deployment package. If you don't provide a customer\
+      \ managed key, Lambda uses an [owned key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-owned-cmk)."
+  LambdaFunctionETLJobLambdaCodeZipFileCImQS:
+    NoEcho: "true"
+    Type: "String"
+    Description: "(Node.js and Python) The source code of your Lambda function. If\
+      \ you include your function source inline with this parameter, CFN places it\
+      \ in a file named ``index`` and zips it to create a [deployment package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html).\
+      \ This zip file cannot exceed 4MB. For the ``Handler`` property, the first part\
+      \ of the handler identifier must be ``index``. For example, ``index.handler``.\n\
+      \  When you specify source code inline for a Node.js function, the ``index``\
+      \ file that CFN creates uses the extension ``.js``. This means that LAM treats\
+      \ the file as a CommonJS module. ES modules aren't supported for inline functions.\n\
+      \   For JSON, you must escape quotes and special characters such as newline\
+      \ (``\\n``) with a backslash.\n If you specify a function that interacts with\
+      \ an AWS CloudFormation custom resource, you don't have to write your own functions\
+      \ to send responses to the custom resource that invoked the function. AWS CloudFormation\
+      \ provides a response module ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))\
+      \ that simplifies sending responses. See [Using Lambda with CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html)\
+      \ for details."
+  LambdaFunctionS3DataReaderCodeSourceKMSKeyArn8qRw5:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ARN of the KMSlong (KMS) customer managed key that's used to\
+      \ encrypt your function's .zip deployment package. If you don't provide a customer\
+      \ managed key, Lambda uses an [owned key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-owned-cmk)."
+  LambdaFunctionGlueTriggerLambdaCodeSourceKMSKeyArnfg1Cc:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ARN of the KMSlong (KMS) customer managed key that's used to\
+      \ encrypt your function's .zip deployment package. If you don't provide a customer\
+      \ managed key, Lambda uses an [owned key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-owned-cmk)."
+  LambdaFunctionGlueTriggerLambdaCodeS3Keydmgul:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Amazon S3 key of the deployment package."
+  LambdaFunctionS3DataReaderCodeImageUriGKKex:
+    NoEcho: "true"
+    Type: "String"
+    Description: "URI of a [container image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)\
+      \ in the Amazon ECR registry."
+  LambdaFunctionETLJobLambdaCodeS3Bucketd8weg:
+    NoEcho: "true"
+    Type: "String"
+    Description: "An Amazon S3 bucket in the same AWS-Region as your function. The\
+      \ bucket can be in a different AWS-account."
+  LambdaFunctionS3DataReaderCodeS3ObjectVersionk58zw:
+    NoEcho: "true"
+    Type: "String"
+    Description: "For versioned objects, the version of the deployment package object\
+      \ to use."
+Resources:
+  IAMManagedPolicyPolicyserviceroleAWSGlueServiceRoleS3DataReaderEZCRCs3Policy:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::ManagedPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      ManagedPolicyName: "AWSGlueServiceRole-S3DataReader-EZCRC-s3Policy"
+      Path: "/service-role/"
+      Description: "This policy will be used for Glue Crawler and Job execution. Please\
+        \ do NOT delete!"
+      Groups: []
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Condition:
+            StringEquals:
+              aws:ResourceAccount: "476642081501"
+          Resource:
+          - "arn:aws:s3:::simple-data-lakehouse-bucket/*"
+          - "arn:aws:s3:::clean-data-lakehouse-bucket/*"
+          Action:
+          - "s3:GetObject"
+          - "s3:PutObject"
+          Effect: "Allow"
+      Roles:
+      - Ref: "IAMRoleAWSGlueServiceRoleS3DataReader"
+      Users: []
+  LambdaFunctionGlueTriggerLambda:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Function"
+    DeletionPolicy: "Retain"
+    Properties:
+      MemorySize: 128
+      Description: ""
+      TracingConfig:
+        Mode: "PassThrough"
+      Timeout: 3
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: "Auto"
+      Handler: "lambda_function.lambda_handler"
+      Code:
+        SourceKMSKeyArn:
+          Ref: "LambdaFunctionGlueTriggerLambdaCodeSourceKMSKeyArnfg1Cc"
+        S3ObjectVersion:
+          Ref: "LambdaFunctionGlueTriggerLambdaCodeS3ObjectVersionREYPp"
+        S3Bucket:
+          Ref: "LambdaFunctionGlueTriggerLambdaCodeS3BucketqAjZk"
+        ZipFile:
+          Ref: "LambdaFunctionGlueTriggerLambdaCodeZipFiledwyc1"
+        ImageUri:
+          Ref: "LambdaFunctionGlueTriggerLambdaCodeImageUrinDdKj"
+        S3Key:
+          Ref: "LambdaFunctionGlueTriggerLambdaCodeS3Keydmgul"
+      Role:
+        Fn::GetAtt:
+        - "IAMRoleLambdaS3ReadRole"
+        - "Arn"
+      FileSystemConfigs: []
+      FunctionName: "GlueTriggerLambda"
+      Runtime: "python3.14"
+      PackageType: "Zip"
+      LoggingConfig:
+        LogFormat: "Text"
+        LogGroup: "/aws/lambda/GlueTriggerLambda"
+      RecursiveLoop: "Terminate"
+      EphemeralStorage:
+        Size: 512
+      Tags:
+      - Value: "arn:aws:resource-groups:us-east-2:476642081501:group/Simple_Data_Lakehouse/0675ebg13y1y2k5rwh1xiheu18"
+        Key: "awsApplication"
+      Architectures:
+      - "x86_64"
+  IAMRoleCloudFormationRole:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/AdministratorAccess"
+      MaxSessionDuration: 3600
+      RoleName: "CloudFormationRole"
+      Description: "Allows CloudFormation to create and manage AWS stacks and resources\
+        \ on your behalf."
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "cloudformation.amazonaws.com"
+          Sid: ""
+  LambdaPermissionFunctionGlueTriggerLambda:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Permission"
+    DeletionPolicy: "Retain"
+    Properties:
+      FunctionName:
+        Fn::GetAtt:
+        - "LambdaFunctionGlueTriggerLambda"
+        - "Arn"
+      Action: "lambda:InvokeFunction"
+      SourceArn:
+        Fn::GetAtt:
+        - "S3BucketDlkhrawdata"
+        - "Arn"
+      Principal: "s3.amazonaws.com"
+      SourceAccount: "476642081501"
+  EC2SecurityGroup:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SecurityGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      GroupDescription: "default VPC security group"
+      GroupName: "default"
+      VpcId:
+        Ref: "EC2VPC"
+      SecurityGroupIngress:
+      - IpProtocol: "-1"
+        FromPort: -1
+        SourceSecurityGroupId:
+          Fn::GetAtt:
+          - "EC2VPC"
+          - "DefaultSecurityGroup"
+        ToPort: -1
+        SourceSecurityGroupOwnerId: "476642081501"
+      SecurityGroupEgress:
+      - CidrIp: "0.0.0.0/0"
+        IpProtocol: "-1"
+        FromPort: -1
+        ToPort: -1
+      Tags:
+      - Value: "arn:aws:resource-groups:us-east-2:476642081501:group/Simple_Data_Lakehouse/0675ebg13y1y2k5rwh1xiheu18"
+        Key: "awsApplication"
+  LogsLogStreamS3DataCrawler:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "S3DataCrawler"
+      LogGroupName:
+        Ref: "LogsLogGroupawsgluecrawlers"
+  ResourceGroupsGroupSimpleDataLakehouse0675ebg13y1y2k5rwh1xiheu18:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ResourceGroups::Group"
+    DeletionPolicy: "Retain"
+    Properties:
+      Configuration:
+      - Type: "AWS::ResourceGroups::ApplicationGroup"
+        Parameters: []
+      Tags:
+      - Value: "true"
+        Key: "EnableAWSServiceCatalogAppRegistry"
+      - Value: "arn:aws:resource-groups:us-east-2:476642081501:group/Simple_Data_Lakehouse/0675ebg13y1y2k5rwh1xiheu18"
+        Key: "awsApplication"
+      Name: "Simple_Data_Lakehouse/0675ebg13y1y2k5rwh1xiheu18"
+  IAMRoleDatalakeingestec2role:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/service-role/AmazonS3ObjectLambdaExecutionRolePolicy"
+      - "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+      - "arn:aws:iam::aws:policy/AdministratorAccess"
+      - "arn:aws:iam::aws:policy/AWSCloudFormationFullAccess"
+      MaxSessionDuration: 3600
+      RoleName: "datalake-ingest-ec2-role"
+      Description: "Allows EC2 instances to call AWS services on your behalf."
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "ec2.amazonaws.com"
+  IAMManagedPolicyPolicyserviceroleAWSLambdaBasicExecutionRole5ce8e5f820fe44f3aa29eeebaaf0b6f9:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::ManagedPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      ManagedPolicyName: "AWSLambdaBasicExecutionRole-5ce8e5f8-20fe-44f3-aa29-eeebaaf0b6f9"
+      Path: "/service-role/"
+      Description: ""
+      Groups: []
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Resource: "arn:aws:logs:us-east-2:476642081501:*"
+          Action: "logs:CreateLogGroup"
+          Effect: "Allow"
+        - Resource:
+          - "arn:aws:logs:us-east-2:476642081501:log-group:/aws/lambda/ClintonS3ProcessingLambdaFunction:*"
+          Action:
+          - "logs:CreateLogStream"
+          - "logs:PutLogEvents"
+          Effect: "Allow"
+      Roles:
+      - "ClintonS3ProcessingLambdaFunction-role-7b9h0eva"
+      Users: []
+  EventsEventBusDefault:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Events::EventBus"
+    DeletionPolicy: "Retain"
+    Properties:
+      Tags: []
+      Name: "default"
+  LogsLogStreamDLKHGlueCrawler:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "DLKHGlueCrawler"
+      LogGroupName:
+        Ref: "LogsLogGroupawsgluecrawlers"
+  IAMManagedPolicyPolicyserviceroleAWSLambdaBasicExecutionRolea1ed7bfacc494502b34edce23ba1af8f:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::ManagedPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      ManagedPolicyName: "AWSLambdaBasicExecutionRole-a1ed7bfa-cc49-4502-b34e-dce23ba1af8f"
+      Path: "/service-role/"
+      Description: ""
+      Groups: []
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Resource: "arn:aws:logs:us-east-2:476642081501:*"
+          Action: "logs:CreateLogGroup"
+          Effect: "Allow"
+        - Resource:
+          - "arn:aws:logs:us-east-2:476642081501:log-group:/aws/lambda/ClintonLambdaTest:*"
+          Action:
+          - "logs:CreateLogStream"
+          - "logs:PutLogEvents"
+          Effect: "Allow"
+      Roles: []
+      Users: []
+  IAMInstanceProfileDatalakeingestec2role:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::InstanceProfile"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/"
+      Roles:
+      - Ref: "IAMRoleDatalakeingestec2role"
+      InstanceProfileName:
+        Ref: "IAMRoleDatalakeingestec2role"
+  IAMRoleAWSGlueServiceRoleS3DataReader:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/service-role/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::476642081501:policy/service-role/AWSGlueServiceRole-S3DataReader-EZCRC-s3Policy"
+      - "arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole"
+      MaxSessionDuration: 3600
+      RoleName: "AWSGlueServiceRole-S3DataReader"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Condition:
+            StringEquals:
+              aws:SourceAccount: "476642081501"
+          Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "glue.amazonaws.com"
+  S3BucketDlkhprocesseddata:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::S3::Bucket"
+    DeletionPolicy: "Retain"
+    Properties:
+      PublicAccessBlockConfiguration:
+        RestrictPublicBuckets: true
+        IgnorePublicAcls: true
+        BlockPublicPolicy: true
+        BlockPublicAcls: true
+      BucketName: "dlkh-processed-data"
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: "BucketOwnerEnforced"
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+        - BucketKeyEnabled: true
+          ServerSideEncryptionByDefault:
+            SSEAlgorithm: "AES256"
+      Tags:
+      - Value: ""
+        Key: "datalake-resource-s3"
+      - Value: "arn:aws:resource-groups:us-east-2:476642081501:group/Simple_Data_Lakehouse/0675ebg13y1y2k5rwh1xiheu18"
+        Key: "awsApplication"
+  LogsLogGroupawsgluecrawlers:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      FieldIndexPolicies: []
+      LogGroupClass: "STANDARD"
+      LogGroupName: "/aws-glue/crawlers"
+      DataProtectionPolicy: {}
+  IAMManagedPolicyPolicyserviceroleAWSLambdaBasicExecutionRole78d683980e8347e4845077c61da63da5:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::ManagedPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      ManagedPolicyName: "AWSLambdaBasicExecutionRole-78d68398-0e83-47e4-8450-77c61da63da5"
+      Path: "/service-role/"
+      Description: ""
+      Groups: []
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Resource: "arn:aws:logs:us-east-1:476642081501:*"
+          Action: "logs:CreateLogGroup"
+          Effect: "Allow"
+        - Resource:
+          - "arn:aws:logs:us-east-1:476642081501:log-group:/aws/lambda/GlueTriggerLambda:*"
+          Action:
+          - "logs:CreateLogStream"
+          - "logs:PutLogEvents"
+          Effect: "Allow"
+      Roles: []
+      Users: []
+  IAMRoleLambdaS3ReadRole:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"
+      - "arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole"
+      MaxSessionDuration: 3600
+      RoleName: "LambdaS3ReadRole"
+      Description: "Allows Lambda functions to read data from S3."
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "lambda.amazonaws.com"
+  EC2VPC:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::VPC"
+    DeletionPolicy: "Retain"
+    Properties:
+      CidrBlock: "172.31.0.0/16"
+      EnableDnsSupport: true
+      InstanceTenancy: "default"
+      EnableDnsHostnames: true
+      Tags: []
+  LambdaFunctionS3DataReader:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Function"
+    DeletionPolicy: "Retain"
+    Properties:
+      MemorySize: 128
+      Description: ""
+      TracingConfig:
+        Mode: "PassThrough"
+      Timeout: 3
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: "Auto"
+      Handler: "lambda_function.lambda_handler"
+      Code:
+        SourceKMSKeyArn:
+          Ref: "LambdaFunctionS3DataReaderCodeSourceKMSKeyArn8qRw5"
+        S3ObjectVersion:
+          Ref: "LambdaFunctionS3DataReaderCodeS3ObjectVersionk58zw"
+        S3Bucket:
+          Ref: "LambdaFunctionS3DataReaderCodeS3BucketGUBeZ"
+        ZipFile:
+          Ref: "LambdaFunctionS3DataReaderCodeZipFilecEDjO"
+        ImageUri:
+          Ref: "LambdaFunctionS3DataReaderCodeImageUriGKKex"
+        S3Key:
+          Ref: "LambdaFunctionS3DataReaderCodeS3KeyIhO1D"
+      Role:
+        Fn::GetAtt:
+        - "IAMRoleLambdaS3ReadRole"
+        - "Arn"
+      FileSystemConfigs: []
+      FunctionName: "S3DataReader"
+      Runtime: "python3.12"
+      PackageType: "Zip"
+      LoggingConfig:
+        LogFormat: "Text"
+        LogGroup: "/aws/lambda/S3DataReader"
+      RecursiveLoop: "Terminate"
+      EphemeralStorage:
+        Size: 512
+      Tags:
+      - Value: "arn:aws:resource-groups:us-east-2:476642081501:group/Simple_Data_Lakehouse/0675ebg13y1y2k5rwh1xiheu18"
+        Key: "awsApplication"
+      Architectures:
+      - "x86_64"
+  EventsRuleRuleCrawlerCompleteRule:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Events::Rule"
+    DeletionPolicy: "Retain"
+    Properties:
+      EventBusName:
+        Ref: "EventsEventBusDefault"
+      EventPattern:
+        detail-type:
+        - "Glue Job State Change"
+        source:
+        - "aws.glue"
+      Description: ""
+      State: "ENABLED"
+      Targets:
+      - Arn:
+          Fn::GetAtt:
+          - "LambdaFunctionETLJobLambda"
+          - "Arn"
+        RoleArn:
+          Fn::GetAtt:
+          - "IAMRoleGlueLambdaExecutionRole"
+          - "Arn"
+        Id: "c0455687-efcc-433e-871d-329aa4870bf6"
+      Id: "CrawlerCompleteRule"
+      Tags:
+      - Value: ""
+        Key: "datalake-resource-rule"
+      Name: "CrawlerCompleteRule"
+  S3BucketAwsglueassets476642081501useast2:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::S3::Bucket"
+    DeletionPolicy: "Retain"
+    Properties:
+      PublicAccessBlockConfiguration:
+        RestrictPublicBuckets: true
+        IgnorePublicAcls: true
+        BlockPublicPolicy: true
+        BlockPublicAcls: true
+      BucketName: "aws-glue-assets-476642081501-us-east-2"
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: "BucketOwnerEnforced"
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+        - BucketKeyEnabled: false
+          ServerSideEncryptionByDefault:
+            SSEAlgorithm: "AES256"
+  S3BucketDlkhrawdata:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::S3::Bucket"
+    DeletionPolicy: "Retain"
+    Properties:
+      NotificationConfiguration:
+        QueueConfigurations: []
+        TopicConfigurations: []
+        LambdaConfigurations:
+        - Function:
+            Fn::GetAtt:
+            - "LambdaFunctionGlueTriggerLambda"
+            - "Arn"
+          Event: "s3:ObjectCreated:*"
+      PublicAccessBlockConfiguration:
+        RestrictPublicBuckets: true
+        IgnorePublicAcls: true
+        BlockPublicPolicy: true
+        BlockPublicAcls: true
+      BucketName: "dlkh-raw-data"
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: "BucketOwnerEnforced"
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+        - BucketKeyEnabled: true
+          ServerSideEncryptionByDefault:
+            SSEAlgorithm: "AES256"
+      Tags:
+      - Value: ""
+        Key: "datalake-resource-s3"
+      - Value: "arn:aws:resource-groups:us-east-2:476642081501:group/Simple_Data_Lakehouse/0675ebg13y1y2k5rwh1xiheu18"
+        Key: "awsApplication"
+  IAMRoleGlueLambdaExecutionRole:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/AWSGlueConsoleFullAccess"
+      MaxSessionDuration: 3600
+      RoleName: "GlueLambdaExecutionRole"
+      Description: "Allows Glue to call AWS services on your behalf. "
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "glue.amazonaws.com"
+      Tags:
+      - Value: ""
+        Key: "datalake-resource-role"
+  IAMRoleGlueLabRole:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/AWSGlueConsoleFullAccess"
+      - "arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole"
+      MaxSessionDuration: 3600
+      RoleName: "GlueLabRole"
+      Description: "Allows Glue to call AWS services on your behalf. "
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "glue.amazonaws.com"
+      Tags:
+      - Value: ""
+        Key: "datalake-resource-role"
+  LambdaFunctionETLJobLambda:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Function"
+    DeletionPolicy: "Retain"
+    Properties:
+      MemorySize: 128
+      Description: ""
+      TracingConfig:
+        Mode: "PassThrough"
+      Timeout: 3
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: "Auto"
+      Handler: "lambda_function.lambda_handler"
+      Code:
+        SourceKMSKeyArn:
+          Ref: "LambdaFunctionETLJobLambdaCodeSourceKMSKeyArnGUqy6"
+        S3ObjectVersion:
+          Ref: "LambdaFunctionETLJobLambdaCodeS3ObjectVersionR0mgK"
+        S3Bucket:
+          Ref: "LambdaFunctionETLJobLambdaCodeS3Bucketd8weg"
+        ZipFile:
+          Ref: "LambdaFunctionETLJobLambdaCodeZipFileCImQS"
+        ImageUri:
+          Ref: "LambdaFunctionETLJobLambdaCodeImageUriJxmsO"
+        S3Key:
+          Ref: "LambdaFunctionETLJobLambdaCodeS3Key33m8O"
+      Role:
+        Fn::GetAtt:
+        - "IAMRoleLambdaS3ReadRole"
+        - "Arn"
+      FileSystemConfigs: []
+      FunctionName: "ETLJobLambda"
+      Runtime: "python3.14"
+      PackageType: "Zip"
+      LoggingConfig:
+        LogFormat: "Text"
+        LogGroup: "/aws/lambda/ETLJobLambda"
+      RecursiveLoop: "Terminate"
+      EphemeralStorage:
+        Size: 512
+      Tags:
+      - Value: "arn:aws:resource-groups:us-east-2:476642081501:group/Simple_Data_Lakehouse/0675ebg13y1y2k5rwh1xiheu18"
+        Key: "awsApplication"
+      Architectures:
+      - "x86_64"
