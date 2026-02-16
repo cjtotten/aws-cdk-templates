@@ -11,7 +11,7 @@ Resources:
   GlueTriggerLambda:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: .
+      CodeUri: s3://dlkh-raw-data-bucket/contacts/
       Description: ''
       MemorySize: 128
       Timeout: 3
@@ -103,12 +103,12 @@ Resources:
         BucketEvent1:
           Type: S3
           Properties:
-            Bucket: !Ref DLKHRawDataBucket
+            Bucket: !Ref dlkhRawDataBucket
             Events:
               - s3:ObjectCreated:*
       RuntimeManagementConfig:
         UpdateRuntimeOn: Auto
-  DLKHRawDataBucket:
+  dlkhRawDataBucket:
     Type: AWS::S3::Bucket
     Properties:
       VersioningConfiguration:
@@ -118,7 +118,7 @@ Resources:
           - ServerSideEncryptionByDefault:
               SSEAlgorithm: AES256
       BucketName: !Sub ${AWS::StackName}-myawsbucket-${AWS::AccountId}
-  DLKHRawDataBucketPolicy:
+  dlkhRawDataBucketPolicy:
     Type: AWS::S3::BucketPolicy
     Properties:
       Bucket: Bucket1
